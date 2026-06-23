@@ -25,16 +25,16 @@ def calc_with_same_number() :
     if operation == "/":
         return result / n3
 
+calculation = True
 
-question = input("Do you want to perform another calculation with the same number then yes and if new calculation  ? (yes/no): ").lower()
-while question == "yes":
-    result = calc_with_same_number()
-    print("Result:", result)
+while calculation == True :
     question = input("Do you want to perform another calculation with the same number then yes and if new calculation  ? (yes/no): ").lower()
+    if question == "yes" :
+        result = calc_with_same_number()
+        print("Result:", result)
+    elif question == "no" :
+        result = calc()
+        print("Result:", result)
     
-else :
-    result = calc()
-print("Result:", result)
-
     
     
